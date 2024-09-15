@@ -1,7 +1,11 @@
 @section('title', 'Home')
 @extends('Frontend.layots.main')
 @section('main-container')
-
+<script>
+	 @if(Auth::check())
+	 alert('Welcome, {{ Auth::user()->name }}!');
+	 @endif
+</script>
 <section class="main-banner" id="main-banner">
 	<div class="banner-slider">
 		<div class="banner-slide-box" style="background-image: url('Frontend/images/banner-img.jpg');"></div>
